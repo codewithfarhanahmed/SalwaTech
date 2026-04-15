@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SalwaTech — Digital Solutions That Move</title>
+<title>SalwaDev — Digital Solutions That Move</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+<link rel="apple-touch-icon" href="assets/images/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root {
   --black: #0a0a0a;
@@ -596,7 +600,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#home" class="logo">Salwa<span>Tech</span></a>
+  <a href="#home" class="logo">Salwa<span>Dev</span></a>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
@@ -629,7 +633,7 @@ footer {
   <div class="hero-blob"></div>
   <div class="hero-tag">Pakistan's Bold Digital Agency</div>
   <h1>We Build<br><span class="line2">Digital</span><br><span class="outline">Futures.</span></h1>
-  <p class="hero-sub">SalwaTech crafts high-performance web experiences, intelligent AI systems, and unforgettable brand visuals — built for scale, designed to convert.</p>
+  <p class="hero-sub">SalwaDev crafts high-performance web experiences, intelligent AI systems, and unforgettable brand visuals — built for scale, designed to convert.</p>
   <div class="hero-actions">
     <a href="#services" class="btn-primary">Explore Services →</a>
     <a href="#contact" class="btn-ghost">Get a Free Quote</a>
@@ -776,7 +780,7 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <div class="about-visual reveal">
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="SalwaTech team" class="about-img">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="SalwaDev team" class="about-img">
     <div class="about-badge">
       <span class="big">3+</span>
       <span class="small">Years of Excellence</span>
@@ -785,7 +789,7 @@ footer {
   <div class="about-text reveal">
     <div class="section-tag">About Us</div>
     <h2>We're Not An Agency.<br>We're Your <span class="accent">Digital Partner.</span></h2>
-    <p>SalwaTech was founded with a single obsession: build digital products that actually move the needle. We combine sharp design thinking with technical precision to deliver work that performs as beautifully as it looks.</p>
+    <p>SalwaDev was founded with a single obsession: build digital products that actually move the needle. We combine sharp design thinking with technical precision to deliver work that performs as beautifully as it looks.</p>
     <p>Based in Pakistan, we serve clients globally — from early-stage startups to established brands. Our team brings together expertise in development, design, AI, and marketing to give you an unfair advantage online.</p>
     <div class="tech-stack">
       <span class="tech-pill">Node.js</span>
@@ -815,35 +819,49 @@ footer {
       <div class="ceo-badge">CEO</div>
       <div class="team-overlay">
         <div class="team-name">Farhan Ahmed</div>
-        <div class="team-role">Web Developer & Graphic Designer</div>
+        <div class="team-role">Founder & CEO</div>
       </div>
     </div>
     <div class="team-card">
-      <img src="assets/images/random.png" alt="Team Member">
+      <img src="assets/images/random.png" alt="Waleed Aslam">
       <div class="team-overlay">
-        <div class="team-name">Waleed Aslam</div>
+        <div class="team-name">Team Member</div>
         <div class="team-role">SEO Specialist</div>
       </div>
     </div>
     <div class="team-card">
-      <img src="assets/images/random.png" alt="Team Member">
+      <img src="assets/images/random.png" alt="R-H">
       <div class="team-overlay">
-        <div class="team-name">Umar Shakoor</div>
-        <div class="team-role">Python Developer</div>
+        <div class="team-name">Team Member</div>
+        <div class="team-role">UI/UX Designer</div>
       </div>
     </div>
     <div class="team-card">
-      <img src="assets/images/random.png" alt="Team Member">
+      <img src="assets/images/random.png" alt="Munazzah Muzammil">
       <div class="team-overlay">
-        <div class="team-name">Munazzah Muzammil</div>
+        <div class="team-name">Team Member</div>
         <div class="team-role">SEO Strategist</div>
       </div>
     </div>
     <div class="team-card">
-      <img src="assets/images/random.png" alt="Team Member">
+      <img src="assets/images/random.png" alt="Zain Ul Abideen">
       <div class="team-overlay">
-        <div class="team-name">Ihtesham Jahangir</div>
-        <div class="team-role">AI Engineer</div>
+        <div class="team-name">Team Member</div>
+        <div class="team-role">Full-Stack Developer</div>
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="assets/images/random.png" alt="Umer Shakoor">
+      <div class="team-overlay">
+        <div class="team-name">Team Member</div>
+        <div class="team-role">Python Developer</div>
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="assets/images/random.png" alt="Hamza Hussain">
+      <div class="team-overlay">
+        <div class="team-name">Team Member</div>
+        <div class="team-role">Leads Generation Specialist</div>
       </div>
     </div>
   </div>
@@ -878,14 +896,15 @@ footer {
     </div>
   </div>
   <div class="contact-form reveal">
+    <div id="form-status" style="display:none; padding:1rem; border-radius:2px; margin-bottom:1rem; font-family:'Syne',sans-serif; font-weight:700; font-size:0.9rem;"></div>
     <div class="form-grid">
       <div class="form-row">
         <label>Your Name</label>
         <input type="text" id="fname" placeholder="John Doe">
       </div>
       <div class="form-row">
-        <label>Email Address</label>
-        <input type="email" id="femail" placeholder="you@example.com">
+        <label>Your WhatsApp / Phone</label>
+        <input type="text" id="fphone" placeholder="+1 234 567 8900">
       </div>
     </div>
     <div class="form-row">
@@ -905,17 +924,17 @@ footer {
       <label>Budget Range</label>
       <select id="fbudget">
         <option value="">— Select budget —</option>
-        <option>Under $500</option>
-        <option>$500 – $2,000</option>
-        <option>$2,000 – $10,000</option>
-        <option>$10,000+</option>
+        <option>Under RS 10,000</option>
+        <option>RS 10,000 – RS 20,000</option>
+        <option>RS 20,000 – RS 30,000</option>
+        <option>Above RS 30,000+</option>
       </select>
     </div>
     <div class="form-row">
       <label>Tell Us About Your Project</label>
       <textarea id="fmsg" placeholder="Describe your project, goals, and timeline..."></textarea>
     </div>
-    <button class="btn-submit" onclick="submitForm()">Send Message — Let's Build ↗</button>
+    <button class="btn-submit" id="submitBtn" onclick="submitForm()">Send Message — Let's Build ↗</button>
   </div>
 </section>
 
@@ -923,7 +942,7 @@ footer {
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="#home" class="logo">Salwa<span>Tech</span></a>
+      <a href="#home" class="logo">Salwa<span>Dev</span></a>
       <p>Pakistan's boldest digital agency. We build websites, AI systems, and brand visuals that drive real growth.</p>
     </div>
     <div class="footer-col">
@@ -961,9 +980,9 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 SalwaTech. All rights reserved.</span>
+    <span>© 2025 SalwaDev. All rights reserved.</span>
     <span>Built with ♥ in Pakistan</span>
-    <a href="#home" class="logo">Salwa<span>Tech</span></a>
+    <a href="#home" class="logo">Salwa<span>Dev</span></a>
   </div>
 </footer>
 
@@ -975,59 +994,128 @@ footer {
 <div class="toast" id="toast">Message sent! We'll reply within 24 hours ✓</div>
 
 <script>
-// Cursor
+// ─── EmailJS Configuration ────────────────────────────────────────────────
+// SETUP STEPS (one-time, takes 3 minutes):
+// 1. Go to https://www.emailjs.com and sign up free
+// 2. Add an Email Service (Gmail recommended) → copy the Service ID below
+// 3. Create an Email Template with these variables:
+//      {{from_name}}, {{phone}}, {{service}}, {{budget}}, {{message}}
+//    Set "To Email" to: farhan.riphah21@gmail.com
+//    Copy the Template ID below
+// 4. Go to Account > API Keys → copy your Public Key below
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← paste here
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← paste here
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← paste here
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+// ─── Cursor ───────────────────────────────────────────────────────────────
 const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
+const ring   = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
-function animRing() { rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animRing); }
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+});
+function animRing() {
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  requestAnimationFrame(animRing);
+}
 animRing();
 document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '56px'; ring.style.height = '56px'; });
-  el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '36px'; ring.style.height = '36px'; });
+  el.addEventListener('mouseenter', () => { cursor.style.width='20px'; cursor.style.height='20px'; ring.style.width='56px'; ring.style.height='56px'; });
+  el.addEventListener('mouseleave', () => { cursor.style.width='10px'; cursor.style.height='10px'; ring.style.width='36px'; ring.style.height='36px'; });
 });
 
-// Scroll reveal
+// ─── Scroll Reveal ────────────────────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 reveals.forEach(r => obs.observe(r));
 
-// Mobile menu
+// ─── Mobile Menu ──────────────────────────────────────────────────────────
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
   const h = document.getElementById('hamburger');
   const open = m.style.display === 'flex';
   m.style.display = open ? 'none' : 'flex';
   h.children[0].style.transform = open ? '' : 'rotate(45deg) translate(4px,4px)';
-  h.children[1].style.opacity = open ? '1' : '0';
+  h.children[1].style.opacity   = open ? '1' : '0';
   h.children[2].style.transform = open ? '' : 'rotate(-45deg) translate(4px,-4px)';
 }
 
-// Form submit
-function submitForm() {
-  const name = document.getElementById('fname').value;
-  const email = document.getElementById('femail').value;
-  const service = document.getElementById('fservice').value;
-  const budget = document.getElementById('fbudget').value;
-  const msg = document.getElementById('fmsg').value;
-  if (!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\nBudget: ${budget}\n\nMessage:\n${msg}`);
-  const subject = encodeURIComponent(`Project Inquiry from ${name} — SalwaTech`);
-  window.location.href = `mailto:farhan.riphah21@gmail.com?subject=${subject}&body=${body}`;
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
+// ─── Form Status Helper ───────────────────────────────────────────────────
+function showStatus(msg, ok) {
+  const el = document.getElementById('form-status');
+  el.textContent = msg;
+  el.style.display = 'block';
+  el.style.background = ok ? 'var(--acid)' : '#ff4444';
+  el.style.color = ok ? 'var(--black)' : '#fff';
+  if (ok) setTimeout(() => { el.style.display = 'none'; }, 5000);
 }
 
-// Smooth nav active
-const sections = document.querySelectorAll('section[id]');
+// ─── Form Submit via EmailJS ──────────────────────────────────────────────
+function submitForm() {
+  const name    = document.getElementById('fname').value.trim();
+  const phone   = document.getElementById('fphone').value.trim();
+  const service = document.getElementById('fservice').value;
+  const budget  = document.getElementById('fbudget').value;
+  const msg     = document.getElementById('fmsg').value.trim();
+  const btn     = document.getElementById('submitBtn');
+
+  if (!name || !msg) {
+    showStatus('Please fill in your name and message.', false);
+    return;
+  }
+
+  // Check keys are configured
+  if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+    // Fallback: open mailto if EmailJS not yet configured
+    const body = encodeURIComponent(`Name: ${name}\nPhone/WhatsApp: ${phone}\nService: ${service}\nBudget: ${budget}\n\nMessage:\n${msg}`);
+    const subject = encodeURIComponent(`Project Inquiry from ${name} — SalwaDev`);
+    window.open(`mailto:farhan.riphah21@gmail.com?subject=${subject}&body=${body}`);
+    showStatus('Opening your email client… (configure EmailJS for instant delivery)', true);
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    from_name : name,
+    phone     : phone || 'Not provided',
+    service   : service || 'Not specified',
+    budget    : budget  || 'Not specified',
+    message   : msg,
+    to_email  : 'farhan.riphah21@gmail.com'
+  })
+  .then(() => {
+    showStatus('Message sent! We\'ll get back to you within 24 hours ✓', true);
+    btn.textContent = 'Sent ✓';
+    btn.style.background = '#4caf50';
+    document.getElementById('fname').value  = '';
+    document.getElementById('fphone').value = '';
+    document.getElementById('fservice').value = '';
+    document.getElementById('fbudget').value  = '';
+    document.getElementById('fmsg').value     = '';
+    setTimeout(() => { btn.disabled = false; btn.textContent = 'Send Message — Let\'s Build ↗'; btn.style.background = ''; }, 4000);
+  })
+  .catch(err => {
+    console.error('EmailJS error:', err);
+    showStatus('Something went wrong. Please WhatsApp us directly!', false);
+    btn.disabled = false;
+    btn.textContent = 'Send Message — Let\'s Build ↗';
+  });
+}
+
+// ─── Active Nav on Scroll ─────────────────────────────────────────────────
+const navSections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  sections.forEach(s => {
-    const top = s.offsetTop - 100;
-    const bottom = top + s.offsetHeight;
+  navSections.forEach(s => {
+    const top = s.offsetTop - 100, bottom = top + s.offsetHeight;
     const id = s.getAttribute('id');
     const link = document.querySelector(`nav a[href="#${id}"]`);
     if (link) link.style.color = scrollY >= top && scrollY < bottom ? 'var(--acid)' : '';
